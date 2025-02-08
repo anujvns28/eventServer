@@ -17,14 +17,14 @@ const server = createServer(app); // ✅ Correctly create an HTTP server
 // Enable CORS with credentials
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://eventify-taupe.vercel.app/",
     credentials: true,
   })
 );
 
 // Middleware for JSON & Form Data Parsing
 app.use(express.json());
-app.use(express.urlencoded({ extended: true })); 
+app.use(express.urlencoded({ extended: true }));
 
 // File Upload Middleware
 app.use(
@@ -46,7 +46,7 @@ cloudinaryConnect();
 // Initialize socket.io with CORS configuration
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:5173",
+    origin: "https://eventify-taupe.vercel.app/",
     methods: ["GET", "POST"],
   },
 });
