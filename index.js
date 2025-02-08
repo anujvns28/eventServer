@@ -17,7 +17,7 @@ const server = createServer(app); // ✅ Correctly create an HTTP server
 // Enable CORS with credentials
 app.use(
   cors({
-    origin: "https://eventify-taupe.vercel.app/",
+    origin: "https://eventify-taupe.vercel.app",
     credentials: true,
   })
 );
@@ -46,7 +46,7 @@ cloudinaryConnect();
 // Initialize socket.io with CORS configuration
 const io = new Server(server, {
   cors: {
-    origin: "https://eventify-taupe.vercel.app/",
+    origin: "https://eventify-taupe.vercel.app",
     methods: ["GET", "POST"],
   },
 });
